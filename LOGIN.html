@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style-prototipoMiguel.css">
+    
+    <title>Login</title>
+</head>
+
+<body>
+
+
+    <header class="dash">
+
+        <div class="container">
+            <h1><a href="C:\Users\Usuário\Documents\SITE\PrototipoSite-MIGUEL.html"><img src="https://cdn-icons-png.flaticon.com/512/3944/3944095.png" alt="" width="75" height="75"></a></h1>
+            <div class="navbar">
+                <ul>
+                    <li></li>
+                    <button><a href="">Quem somos</a></button>
+                    <li></li>
+                    <button><a
+                            href="prototipoCalculadoraMiguel.html">Simule</a></button>
+                    <li></li>
+                    <button><a href="LOGIN.html">Login</a></button>
+                    <li></li>
+                    <button><a href="cadastro.html">Cadastro</a></button>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+        <form>
+            <section class="inputs-container"><br>
+                <h2>Login</h2><br>
+                <input type="email" placeholder="example@gmail.com">
+
+                <div class="password-container">
+                    <input type="password" id="field-password" class="field-password" placeholder="********">
+                    <i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
+                    <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+                </div>
+            </section>
+
+            <section class="password-infos">
+                <div>
+                    <input type="checkbox">
+                    <span>Lembrar senha?</span>
+                </div>
+                <a href="#">Esqueceu sua senha?</a>
+            </section>
+            <button id="but-logar" onclick="validacao()"><a href="dahsboard.html">Login</a></button>
+            <footer>
+                <hr>
+                <span>Ainda não tem uma conta?<a href="cadastro.html">Cadastre-se</a></span>
+            </footer>
+
+        </form>
+    </main>
+    <footer>
+        <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
+    </footer>
+
+</body>
+
+</html>
