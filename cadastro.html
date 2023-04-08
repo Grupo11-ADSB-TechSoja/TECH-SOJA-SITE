@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,15 @@
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
     <header class="dash">
 
         <div class="container">
-            <h1><a href="PrototipoSite-MIGUEL.html"><img src="https://cdn-icons-png.flaticon.com/512/3944/3944095.png" alt="" width="75" height="75"></a></h1>
+            <h1><a href="PrototipoSite-MIGUEL.html"><img src="https://cdn-icons-png.flaticon.com/512/3944/3944095.png"
+                        alt="" width="75" height="75"></a></h1>
             <div class="navbar">
                 <ul>
                     <li></li>
@@ -26,7 +29,7 @@
                     <li></li>
                     <button><a href="LOGIN.html">Login</a></button>
                     <li></li>
-                    <button><a href="">Cadastro</a></button>
+                    <button><a href="cadastro.html">Cadastro</a></button>
                     <li></li>
                 </ul>
             </div>
@@ -37,58 +40,59 @@
 
     <main>
         <form>
-            <span class="cadastre-se">Cadastre-se</span> 
-        <div>
-            <section class="inputs-container"><br>
-            Nome:
-            <input type="text" placeholder="Seu nome" ><br>
-            Email:
-            <input type="email" placeholder="example@gmail.com" >
-            <div class="password-container">
-            Senha:
-            <input type="password" id="field-password" class="field-password" placeholder="********"><br>
-            Confirme sua senha:
-            <input type="password" id="field-password" class="field-password" placeholder="********"><br>
-            CPF/CNPJ:
-            <input type="text" placeholder="123.456.789-0x">
+            <span class="cadastre-se">Cadastre-se</span>
+            <div>
+                <section class="inputs-container"><br>
+                    Nome:
+                    <input type="text" id="nome" placeholder="Seu nome"><br>
+                    Email:
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                    <div class="password-container">
+                        Senha:
+                        <input type="password" id="field-password" class="field-password" placeholder="********"><br>
+                        Confirme sua senha:
+                        <input type="password" id="field-password" class="field-password" placeholder="********"><br>
+                        CPF/CNPJ:
+                        <input type="text" id="cpf" placeholder="123.456.789-0x">
+                    </div><br>
+                    <button id="but-cadastro" onclick="validar()"><a href="">Proxima pagina</a></button>
+                </section>
             </div><br>
-            <button id="but-cadastro"><a href="LOGIN.html">Proxima pagina</a></button>
-        </section>
-    </div><br>
-    
-    
-    </form>
-    </main> 
+
+
+        </form>
+    </main>
     <footer>
         <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
     </footer>
 
 </body>
+
 </html>
 <script>
 
     var url = "file:///C:/Users/Usu%C3%A1rio/Documents/SITE/LOGIN.html"
-        function abrir() {
-            open(url, '_blank')
-            alert(`amem`)
+    function abrir() {
+        open(url, '_blank')
+        
+    }
+
+    document.getElementById("but-cadastro").addEventListener("click", function validar() {
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value
+        var senha = document.getElementById("field-password").value
+        var validar = document.getElementById("field-password").value
+        var cpf = document.getElementById("cpf").value
+
+
+        if (nome == "" || email == "" || senha == "" || validar == "" || cpf == "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        } else if (nome == "miguel" || email == "miguel@sptech.com" || senha == "091002" || validar == "091002" || cpf == "123.456.789-00") {
+            abrir()
+            return true;
         }
-    
-        document.getElementById("but-cadastro").addEventListener("click", function validar() {
-            var nome = document.getElementById("nome").value;
-            var email = document.getElementById("email").value
-            var senha = document.getElementById("field-password").value
-            var validar = document.getElementById("field-password").value
-            var cpf = document.getElementById("cpf").value
-    
-    
-            if (nome== "" || email == "" || senha == "" || validar =="" || cpf == "" ) {
-                alert("Por favor, preencha todos os campos.");
-                return false;
-            } else if (nome == "miguel" || email == "miguel@sptech.com" || senha == "091002" || validar == "091002" || cpf == "123.456.789-00") {
-                abrir()
-                return true;
-            }
-    
-    
-        });
-    </script>
+
+
+    });
+</script>

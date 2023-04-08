@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="style-prototipoMiguel.css">
+    <link rel="stylesheet" href="stiyle-calculadora.css">
+   
+    
     
     <title>Login</title>
 </head>
@@ -41,7 +43,7 @@
         <form>
             <section class="inputs-container"><br>
                 <h2>Login</h2><br>
-                <input type="email" placeholder="example@gmail.com">
+                <input type="email" id="oi" placeholder="example@gmail.com">
 
                 <div class="password-container">
                     <input type="password" id="field-password" class="field-password" placeholder="********">
@@ -57,7 +59,7 @@
                 </div>
                 <a href="#">Esqueceu sua senha?</a>
             </section>
-            <button id="but-logar" onclick="validacao()"><a href="dahsboard.html">Login</a></button>
+            <button id="but-logar" onclick="validacao()"><a href="">Login</a></button>
             <footer>
                 <hr>
                 <span>Ainda não tem uma conta?<a href="cadastro.html">Cadastre-se</a></span>
@@ -78,7 +80,7 @@
     var url = "file:///C:/Users/Usu%C3%A1rio/Documents/SITE/dahsboard.html"
     function abrir() {
         open(url, '_blank')
-        alert(`amem`)
+        
     }
 
     document.getElementById("but-logar").addEventListener("click", function validacao() {
