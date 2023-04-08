@@ -72,3 +72,29 @@
 </body>
 
 </html>
+
+<script>
+
+    var url = "file:///C:/Users/Usu%C3%A1rio/Documents/SITE/dahsboard.html"
+    function abrir() {
+        open(url, '_blank')
+        alert(`amem`)
+    }
+
+    document.getElementById("but-logar").addEventListener("click", function validacao() {
+        var email = document.getElementById("oi").value;
+        var senha = document.getElementById("field-password").value
+        if (email == "" || senha == "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        } else if (email == "miguel@sptech.com" || senha == "silva") {
+            abrir()
+            return true;
+        }
+
+
+    });
+
+
+
+</script>
