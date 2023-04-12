@@ -6,114 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="stilodash.css">
     <link rel="stylesheet" href="style-prototipoMiguel.css">
    
     <title>Dashboards</title>
 </head>
-<header class="dash">
-
-    <div class="container">
-        <h1><a href="PrototipoSite-MIGUEL.html"><img src="https://cdn-icons-png.flaticon.com/512/3944/3944095.png" alt="" width="75" height="75"></a></h1>
-        <div class="navbar">
-            <ul>
-                <li></li>
-                <button><a href="">Quem somos</a></button>
-                <li></li>
-                <button><a href="prototipoCalculadoraMiguel.html">Simule</a></button>
-                <li></li>
-                <button><a href="LOGIN.html">Login</a></button>
-                <li></li>
-                <button><a href="cadastro.html">Cadastro</a></button>
-                <li></li>
-            </ul>
-        </div>
+<div class="s">
+    <div class="im"><a href="PrototipoSite-MIGUEL.html"><img  style="width: 220px; height: 180px;" src="logo.png"></a></div>
+    <div class="navbar">
+        <div class="text"><a class="link" href="">Contato</a></div>
+        <div class="text"><a class="link" href="prototipoCalculadoraMiguel.html">Simule</a></div>
+        <div class="text"><a class="link" href="LOGIN.html">Área cliente</a></div>
     </div>
-
-
-</header>
-
-<body style="display:flex;"> 
-    <div class="chart-container" style="position: relative; height: 40vh; width: 80vw;" >
-        <canvas id="myChart"></canvas>
-    </div>
-
-    
-</body>
-    <body style="display:flex;"> 
-        <div class="chart-container" style="position: relative; height: 40vh; width: 80vw;" >
-            <canvas id="myChart2"></canvas>
-        </div>
-
-
+</div>
 
 </body>
-
-<script>
-    const ctx = document.getElementById('myChart');
-    const ctx2 = document.getElementById('myChart2');
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho'],
-            datasets: [{
-                label: '# Temperatura media',
-                data: [22, 24, 27, 23, 20, 18],
-                backgroundColor: '#ed3c1f',
-                borderWidth: 1
-            },
-            {
-                label: '# umidade media ',
-                data: [90, 89, 93, 87, 88,],
-                backgroundColor: '#31b5f0',
-                borderWidth: 1
-            }
-            ]
-
-
-
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-    new Chart(ctx2, {
-        type: 'line',
-        data: {
-            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
-            datasets: [{
-                label: '# Temperatura ',
-                data: [30, 29, 28, 25, 22, 23],
-                backgroundColor: '#ed3c1f',
-                borderWidth: 1
-            },
-            {
-                label: '# umidade  ',
-                data: [80, 82, 80, 85, 80,83],
-                backgroundColor: '#31b5f0',
-                borderWidth: 1
-            }
-            ]
-
-
-
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    
-</script>
-
 
 </html>

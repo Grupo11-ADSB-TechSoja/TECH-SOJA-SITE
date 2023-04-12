@@ -60,7 +60,7 @@ main {
     height: 1048px;
     width: 100%;
     min-width: 100% ;
-    background-image: url(https://images.pexels.com/photos/247597/pexels-photo-247597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url();
 
     display: flex;
     justify-content: center;
@@ -198,4 +198,10 @@ main form footer a:hover{
   
     flex-direction: column;
     align-items: center;  
+}
+.pg{
+    height: 500px;
+    width: 300px;
+    padding:  15px;
+     
 }
