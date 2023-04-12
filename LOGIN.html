@@ -48,7 +48,7 @@
                 </div>
                 <a href="#">Esqueceu sua senha?</a>
             </section>
-            <button id="but-logar" onclick="validacao()"><a href="">Login</a></button>
+            <button id="but-logar" onclick="validacao()"><a href="./dahsboard.html">Login</a></button>
             <footer>
                 <hr>
                 <span class="password-infos"> Ainda não tem uma conta?<a href="cadastro.html">Cadastre-se</a></span>
@@ -66,11 +66,11 @@
 
 <script>
 
-    var url = "file:///C:/Users/Usu%C3%A1rio/Documents/tech/TECH-SOJA-SITE/dahsboard.html"
-    function abrir() {
-        open(url, '_blank')
+    
+    /*function abrir() {
+        open()
         
-    }
+    }*/
 
     document.getElementById("but-logar").addEventListener("click", function validacao() {
         var email = document.getElementById("oi").value;
@@ -79,7 +79,7 @@
             alert("Por favor, preencha todos os campos.");
             return false;
         } else if (email && "miguel@sptech.com" && senha == "silva") {
-            abrir()
+            //abrir()
             return true;
         }
 
