@@ -1,3 +1,5 @@
+
+// SCRIPT LOGIN !!!!!!!!!!!!!!!
 function showPassword(){
     const eye = document.getElementById ('eye')
     const eyeSlash = document.getElementById('eye-slash')
@@ -28,9 +30,31 @@ document.getElementsByClassName('header').addEventListener("scroll", function(){
 
 
 function alterar(){
-   var main = document.getElementById('main')
-   var main2 = document.getElementById('main2')
+var main = document.getElementById('main')
+var main2 = document.getElementById('main2')
 
     main.style.display = 'none'
     main2.style.display ='inherit'
 }
+
+    /*function abrir() {
+        open()
+        
+    }*/
+
+    document.getElementById("but-logar").addEventListener("click", function validacao() {
+        var email = document.getElementById("oi").value;
+        var senha = document.getElementById("field-password").value
+        if (email == "" && senha == "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        } else if (email && "miguel@sptech.com" && senha == "silva") {
+            //abrir()
+            return true;
+        }
+
+
+    });
+
+
+

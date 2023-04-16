@@ -1,12 +1,12 @@
 @font-face
 {
     font-family: Righteous-Regular;
-    src: url(Righteous-Regular.ttf);
+    src: url(/assets/fonts/Righteous-Regular.ttf);
 }
 @font-face
 {
     font-family:ABeeZee-Regular;
-    src: url(ABeeZee-Regular.ttf);
+    src: url(/assets/fonts/);
 }
 @keyframes move {
 
@@ -36,8 +36,8 @@ from{
 }
 body {
     margin: 0;
-    padding: 0;  
-    background:  url(soja.jpg) fixed no-repeat;
+    padding: 0;
+    background:  url(/assets/img/soja.jpg) fixed no-repeat;
     background-size: 100%;
 }
 .s
