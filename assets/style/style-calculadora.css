@@ -132,9 +132,8 @@ button {
    
   }
 .banner {
-    background-size: cover;
+    background-size: 100%;
     padding: 260px 0;
-
 }
 
 .banner .container {
