@@ -1,3 +1,16 @@
+.amem {
+
+padding: 3px;
+height: 100%;
+width: 100%;
+background-image: url(./soja.jpg);
+
+
+
+}
+
+
+
 form {
     background-color: #F9F9F9;
     border: 1px solid #CCC;

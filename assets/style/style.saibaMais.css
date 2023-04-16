@@ -1,5 +1,5 @@
 .caixaM {
-    background-color: #e5e5e58f;
+    background-color: gray;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
@@ -16,7 +16,7 @@
     margin-bottom: 10px;
 }
 .caixaVI {
-    background-color: #e5e5e58f;
+    background-color: gray;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
@@ -32,7 +32,7 @@
     margin-bottom: 10px;
 }
 .caixaVA {
-    background-color: #e5e5e58f;
+    background-color: gray;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
@@ -49,36 +49,35 @@
 }
 
 .banner1{
-    background-image: url('');
-    background-repeat: no-repeat;
+   
+    
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
+  
 }  
 
 .banner2{
-    background-image: url('');
-    background-repeat: no-repeat;
+    
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
+  
 }  
 
 .banner3{
-    background-image: url('');
-    background-repeat: no-repeat;
+    
+   
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
+   
 }  
 .txtM h2{
 

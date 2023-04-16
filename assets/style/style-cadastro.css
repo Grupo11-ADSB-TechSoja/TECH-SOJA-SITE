@@ -60,7 +60,7 @@ main {
     height: 1048px;
     width: 100%;
     min-width: 100% ;
-    background-image: url();
+    background-image: url(./soja.jpg);
 
     display: flex;
     justify-content: center;
