@@ -14,10 +14,11 @@
 .caixaM h1 {
     color: green;
     margin-bottom: 10px;
-   
+
 }
+
 .caixaVI {
-    background-color: #e5e5e58f;
+    background-color: grey;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
@@ -32,8 +33,9 @@
     color: green;
     margin-bottom: 10px;
 }
+
 .caixaVA {
-    background-color: #e5e5e58f;
+    background-color: grey;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
@@ -49,51 +51,45 @@
     margin-bottom: 10px;
 }
 
-.banner1{
-    background-image: url('');
-    background-repeat: no-repeat;
+.banner1 {
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
-}  
+}
 
-.banner2{
-    background-image: url('');
-    background-repeat: no-repeat;
+.banner2 {
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
-}  
 
-.banner3{
-    background-image: url('');
-    background-repeat: no-repeat;
+}
+
+.banner3 {
     height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #75D390;
-}  
-.txtM h2{
+
+}
+
+.txtM h2 {
 
     color: black;
     display: flex;
 }
 
-.txtVI h2{
+.txtVI h2 {
 
     color: black;
     display: flex;
 }
 
-.txtVA h2{
+.txtVA h2 {
 
     color: black;
     display: flex;
