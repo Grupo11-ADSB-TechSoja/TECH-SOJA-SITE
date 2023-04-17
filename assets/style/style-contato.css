@@ -1,29 +1,94 @@
-.amem {
+body {
+    padding: 0;
+    margin: 0;
 
-padding: 3px;
-height: 100%;
-width: 100%;
-background-image: url(./soja.jpg);
+}
 
-
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* min-height: 100vh; */
+    width: 100%;
+    background-image: url(./soja.jpg);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 
 }
 
 
 
-form {
+.form-box {
+    position: relative;
+    width: 450px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 2px solid #FFF;
+}
+
+.contato {
+    color: yellowgreen;
+    text-align: center;
+    font-size: 30px;
+    border-bottom:1px solid rgb(255, 255, 255, 0.5);
+}
+
+.input_box {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+
+}
+
+.input_box label {
+
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+}
+
+.input_box input {
+
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input_mensagem {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+}
+
+.input_mensagem label {
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+}
+
+/* form {
     background-color: #F9F9F9;
-    border: 1px solid #CCC;
+    position: relative;
+    border: 3px solid #CCC;
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
     max-width: 600px;
-}
+}*/
 
-label {
+/* label {
     display: block;
     margin-bottom: 10px;
-}
+} */
 
 input[type="text"],
 textarea {
@@ -31,10 +96,13 @@ textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #CCC;
+    color: white;
 }
 
-textarea {
-    height: 200px;
+* textarea {
+    background-color: transparent;
+    color: white;
+    height:95px;
 }
 
 input[type="submit"] {
@@ -44,8 +112,4 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #3e8e41;
 }
