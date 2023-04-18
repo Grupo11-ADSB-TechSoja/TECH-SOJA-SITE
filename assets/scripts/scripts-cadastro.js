@@ -1,10 +1,11 @@
-    /*var url = "file:///C:/Users/Usu%C3%A1rio/Documents/SITE/LOGIN.html"
-    function abrir() {
-        open(url, '_blank')
-        
-    }*/
 
-    document.getElementById("but-cadastro").addEventListener("click", function validar() {
+    function abrir() {
+        open(window.location.href = 'login.html')
+        
+    }
+
+    // document.getElementById("but-cadastro").addEventListener("click", function validar() 
+    function validar(){
         var nome = document.getElementById("nome").value;
         var email = document.getElementById("email").value
         var senha = document.getElementById("field-password").value
@@ -21,4 +22,4 @@
         }
 
 
-    });
+    };
