@@ -1,60 +1,17 @@
-
-// SCRIPT LOGIN !!!!!!!!!!!!!!!
-function showPassword(){
-    const eye = document.getElementById ('eye')
-    const eyeSlash = document.getElementById('eye-slash')
-    const fieldPassword = document.getElementById('field-password')
-
-    if(eye.style.display == 'none'){
-        eye.style.display = 'block';
-        eyeSlash.style.display = 'none';
-        fieldPassword.type = 'text';
-    }else {
-        eye.style.display = 'none';
-        eyeSlash.style.display = 'block';
-        fieldPassword.type = 'password';
-    }
-};
-
-document.getElementById('btn-logar').addEventListener('click', function(e) {
-    e.preventDefault()
-    alert('Logado!')
-})
-
-
-// Function para "substituir" o css de uma tag por outra mas ao mesmo tempo "manter"
-document.getElementsByClassName('header').addEventListener("scroll", function(){
-    var header = document.querySelector("header")
-    header.classList.toggle("dash",window.scrollY > 100)
-})
-
-
-function alterar(){
-var main = document.getElementById('main')
-var main2 = document.getElementById('main2')
-
-    main.style.display = 'none'
-    main2.style.display ='inherit'
+function abrir() {
+    open(window.location.href = 'dashboard.html');
 }
-
-    /*function abrir() {
-        open()
-        
-    }*/
-
-    document.getElementById("but-logar").addEventListener("click", function validacao() {
+    function validacao(){
         var email = document.getElementById("oi").value;
         var senha = document.getElementById("field-password").value
         if (email == "" && senha == "") {
             alert("Por favor, preencha todos os campos.");
             return false;
-        } else if (email && "miguel@sptech.com" && senha == "silva") {
-            //abrir()
+        } else if (email && "admin@sptech.school" && senha == "admin") {
+        abrir()
             return true;
         }
-
-
-    });
+    }
 
 
 
