@@ -1,5 +1,5 @@
 .container{
-    background-image: linear-gradient(to bottom,#d6d6d6,#add8e6a2)   ;
+    background-image: linear-gradient(to bottom,#9eedf9,#47f767a2)   ;
 }
 
 
@@ -14,11 +14,12 @@
      justify-content: center;
     margin-right: 400px;
     margin-left: 45px;
+    width: fit-content;
     
 }
 
 .caixaM h1 {
-    color: green;
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 .caixaVI {
@@ -60,8 +61,9 @@
     height: fit-content;
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    
 
     
 }  
@@ -125,11 +127,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
-
-
-
-  
+     
 }  
 
 .banner3{
