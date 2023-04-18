@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: aliceblue;
 }
 
 .simuladorC {
@@ -36,7 +37,7 @@
 * {
     padding: 0;
     margin: 0;
-    color: #FFFFFF;
+ 
     font-family: 'Poppins', sans-serif;
     background-size: cover;
 }
