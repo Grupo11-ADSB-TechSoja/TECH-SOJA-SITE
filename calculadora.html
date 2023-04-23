@@ -32,11 +32,10 @@
                 <div class="simuladorC">
                     <h1>Simulador Soja</h1><br><br>
 
-                    Quilograma de soja <input placeholder='0kg' id="in_kg" style="border-radius: 15px; text-align:
-    center;height:40px; width: 190px;"><br>
+                    Quilograma de soja <input placeholder='0kg' id="in_kg" class="input_kg"><br>
                     Selecione o estado para o serviço
 
-                    <select id="sel_estado" style="border-radius: 12px; height:40px; width: 190px; text-align: center;">
+                    <select id="sel_estado" class="input_estado">
                         <option value="">- select -</option>
                         <option value="sp">São Paulo</option>
                         <option value="ms">Mato Grosso do Sul</option>
@@ -50,13 +49,11 @@
 
                     </select>
 
-                    <button onclick="verificar()" style="height:30px; width: 150px;margin-top: 20px;">Calcular
-                        perdas</button>
+                    <button onclick="verificar()" class="button">Calcular perdas</button>
                 </div>
             </div>
 
-            <div id="resultado"
-                style="margin-left: 50px; background-color: #2F4F4F;padding: 130px;border-radius: 10px;flex-direction: column; align-items: center;justify-content: center;display: none;">
+            <div id="resultado" class="resultado">
                 <div id="div_mensagem" class="div_mensagem">
                 </div>
             </div>

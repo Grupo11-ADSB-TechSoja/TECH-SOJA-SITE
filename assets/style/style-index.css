@@ -35,8 +35,8 @@ from{
 body {
     margin: 0;
     padding: 0;
-    background:  url(/assets/img/soja.jpg) fixed no-repeat;
-    background-size: 100%;
+    background:  url(/assets/img/soja.jpg);
+    background-size: cover;
 }
 .s
 
@@ -115,7 +115,8 @@ body {
     height: 400px;
     border: solid;  
     justify-content: center;
-    background-image: url(./soja.jpg)
+    background-image: url(./soja.jpg);
+    background-size: cover;
     /* background-image: url(silosoja.jpg) ; */
     /* background-repeat: no-repeat; */
   

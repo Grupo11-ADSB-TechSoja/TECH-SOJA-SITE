@@ -16,12 +16,7 @@ header {
     background-color: #383c42;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #fff;
-    margin: 2 auto;
-    width: 80%;
-}
+
 header button{
     background-color: green;
     width: 100%;
@@ -40,8 +35,11 @@ header button:hover{
     color: #000000;
 }
 
-h1{
-    color: #ffffff;
+h2{
+    color: yellowgreen;
+    font-size: 40px;
+    margin-bottom: 30px;
+
 }
     
 ul{
@@ -60,10 +58,10 @@ main {
     height: 100%;
     width: 100%;
     background-image: url(./soja.jpg);
-
+    color: white;
     display: flex;
     justify-content: center;
-
+    
     box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -72,11 +70,12 @@ main #form {
   margin-bottom: 20px;
   width: 35%;
   height: 75vh;
-  background-color: #383c42;
+  background-color: transparent;
+  border: 1px solid #fff;
+  backdrop-filter: blur(10px);
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
   padding: 2%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,7 +85,6 @@ main #form {
 main #form .inputs-container {
     margin-top: 10%;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,12 +96,12 @@ main #form .inputs-container input {
     padding: 8px 15px;
     border: 0;
     outline: 0;
-    border-radius: 12px;
-
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid #fff;
     font-size: 16px;
-    color: #312e42;
-
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    color: white;
+     
 }
 
 main #form .inputs-container input:focus {
@@ -114,17 +112,18 @@ main #form .password-container {
     margin-top: 5%;
     width: 100%;
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
 }
 
 main #form .password-container i {
     position: absolute;
     right: 8%;
     top: 35%;
-    color: #7777;
+    color: rgba(119, 119, 119, 0.9);
     cursor: pointer;
 }
 
@@ -135,17 +134,43 @@ main #form .password-container #eye{
 main #form .password-infos{
     width: 90%;
     margin-top: 2%;
-
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+main #form .password-register{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cadastro_button{
+    margin: 10px;
+    color: #75D390;
+
+}
+.register-box{
+    background-color: transparent;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+
 
 main #form .password-infos a{
     transition: 0.2s ease-in-out;
 }
 
 main #form .password-infos a:hover{
+    color: #18acfe;
+}
+main #form .password-register a:hover{
+    transition: 0.2s ease-in-out;
     color: #18acfe;
 }
 

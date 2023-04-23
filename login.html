@@ -28,10 +28,10 @@
         <div id="form">
             <section class="inputs-container"><br>
                 <h2>Login</h2><br>
-                <input type="email" id="oi" placeholder="example@gmail.com">
+                <input type="email" id="oi" placeholder="Email">
 
                 <div class="password-container">
-                    <input type="password" id="field-password" class="field-password" placeholder="********">
+                    <input type="password" id="field-password" class="field-password" placeholder="Senha">
                     <i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
                     <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
                 </div>
@@ -42,16 +42,16 @@
                     <input type="checkbox">
                     <span>Lembrar senha?</span>
                 </div>
-                <a href="#">Esqueceu sua senha?</a>
+                <a href="#" class="cadastro_button">Esqueceu sua senha?</a>
             </section>
-            <button id="but-logar" onclick="validacao()">Login</button>
-            <footer>
-                <span class="password-infos"> Ainda não tem uma conta?<a href="./cadastro.html">Cadastre-se</a></span>
+            <button id="but-logar" onclick="validacao()">Entrar</button>
+            <footer class="register-box">
+                <span class="password-register"> Ainda não tem uma conta?<a class="cadastro_button" href="./cadastro.html">Cadastre-se</a></span>
             </footer>
 
         </div>
     </main>
-    <footer>
+    <footer class="foot-end">
         <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
     </footer>
 
