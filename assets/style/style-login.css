@@ -55,21 +55,19 @@ padding: 0.7em;
     
 main {
     padding: 100px;
-    height: 100%;
-    width: 100%;
-    background-image: url(./soja.jpg);
+    background-image: url(./trator.jpg);
+    background-size: COVER;
+    background-position: 20%;
     color: white;
     display: flex;
     justify-content: center;
-    
-    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
 
 main #form {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 35%;
-  height: 75vh;
+  height: 100%;
   background-color: transparent;
   border: 1px solid #fff;
   backdrop-filter: blur(10px);

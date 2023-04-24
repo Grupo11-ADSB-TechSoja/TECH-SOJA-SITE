@@ -57,7 +57,7 @@ main {
     height: 100%;
     width: 100%;
     min-width: 100%;
-    background-image: url(./soja.jpg);
+    background-image: url(./bg_cadastro.jpg);
     background-size: cover;
     align-items: center;
     display: flex;
@@ -68,7 +68,7 @@ main {
 main #form {
     margin: 5%;
     width: 600px;
-    height: 750px;
+    height: 100%;
     background-color: transparent;
     border-radius: 18px;
     padding: 50px;
