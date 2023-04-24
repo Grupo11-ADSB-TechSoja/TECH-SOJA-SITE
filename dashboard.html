@@ -7,18 +7,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./assets/style/style-index.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets/style/style-dashboard.css">
     <title>Dashboards</title>
 </head>
-<div class="s">
-    <div class="im"><a href="Pagina-inicial.html"><img  style="width: 220px; height: 180px;" src="./assets/img/logo.png"></a></div>
-    <div class="navbar">
-        <div class="text"><a class="link" href="./contato.html">Contato</a></div>
-        <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
-        <div class="text"><a class="link" href="./login.html">Área cliente</a></div>
-    </div>
-</div>
+
+<body>
+    <header>
+        <div class="s">
+            <div class="im"><a href="./TELAinicial.html"><img style="width: 220px; height: 180px;"
+                        src="./assets/img/logo.png"></a></div>
+            <div class="navbar">
+                <div class="text"><a class="link" href="./contato.html">Contato</a></div>
+                <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
+                <div class="text"><a class="link" href="./TELAinicial.html">Sair</a></div>
+            </div>
+    </header>
+
+    <main>
+        <div class="body-site">
+
+            <div class="left-size">
+                <div class="graficoVida">
+
+                    <h1>Saúde dos Silos</h1><br><br>
+
+                    <canvas id="VidaSilos"></canvas>
+
+                </div><br><br><br><br><br><br>
+                <div class="barra-Notify">
+
+                    <center>
+                        <h1>Alertas</h1>
+                    </center>
+
+                    <div class="alertas">
+
+                        <div class="Alert">
+                            <h2>O silo 4 está apresentando Temperaturas acima do ideal no(s) horário(s): 16:00, 17:00
+                            </h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right-size">
+
+                <center>
+                    <h1>Silos</h1>
+                </center> <br> <br>
+
+                <div class="silos">
+
+                    <div class="Silo1">
+                        <button id="Grafico1" class="Grafico1">
+                            <img src="./assets/img/Silo1.png">
+                        </button>
+                    </div>
+
+                    <div class="Silo2">
+                        <button id="Grafico2" class="Grafico2">
+                            <img src="./assets/img/Silo2.png">
+                        </button>
+                    </div>
+
+                    <div class="Silo3">
+                        <button id="Grafico3" class="Grafico3">
+                            <img src="./assets/img/SIlo3.png">
+                        </button>
+                    </div>
+
+                    <div class="Silo4">
+                        <button id="Grafico4" class="Grafico4">
+                            <img src="./assets/img/Silo4.png">
+                        </button>
+                    </div>
+
+                </div><br>
+
+
+                <canvas id="Grafico"></canvas>
+
+                <div class="escala">
+
+                    <div class="Escala-Temperatura">
+                        <img src="./assets/img/Legenda-Temperatura.png">
+                    </div>
+
+                    <div class="Escala-Umidade">
+                        <img src="./assets/img/Legenda-Umidade.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
+    </footer>
 
 </body>
+
+<script>
+
+    const VidaSilos = document.getElementById('VidaSilos');
+    new Chart(VidaSilos, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'Silo 1',
+                'Silo 2',
+                'Silo 3',
+                'Silo 4',
+            ],
+            datasets: [{
+                label: 'Silos',
+                data: [25, 25, 25, 25],
+                backgroundColor: [
+                    '#008000',
+                    '#008000',
+                    '#008000',
+                    '#FF0000',
+                ],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+
+    const graficos = [
+        {
+            id: "grafico1",
+            tipo: "line",
+            dados: {
+                labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',],
+                datasets: [
+                    {
+                        label: "Temperatura (°C)",
+                        data: [16, 16, 16.5, 16.8, 17.17, 17.7, 18, 18.6, 19, 19.2, 19.6, 20, 20.1, 20.4, 20.7, 21, 21, 21, 21, 20, 19, 18.5, 17.9, 17],
+                        backgroundColor: "#3e95cd",
+                        backgroundColor: '#008000',
+                        borderColor: '#008000',
+                        borderwidth: 2
+
+                    },
+                    {
+                        label: 'Umidade (%)',
+                        data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66, 66, 66, 66, 66, 66, 66, 66, 65, 65, 65, 65, 65, 65,],
+                        backgroundColor: '#36A2EB',
+                        borderColor: '#36A2EB',
+                        borderwidth: 2
+                    },
+                ],
+            },
+        },
+        {
+            id: "grafico2",
+            tipo: "line",
+            dados: {
+                labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',],
+                datasets: [
+                    {
+                        label: 'Temperatura (°C)',
+                        data: [16, 16, 16.5, 16.8, 17.17, 17.7, 18, 18.6, 19, 19.2, 19.6, 20, 20.1, 20.4, 20.7, 21, 21, 21, 21, 20, 19, 18.5, 17.9, 17],
+                        backgroundColor: '#008000',
+                        borderColor: '#008000',
+                        borderwidth: 2,
+                        fill: false,
+                    },
+                    {
+                        label: 'Umidade (%)',
+                        data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66, 66, 66, 66, 66, 66, 66, 66, 65, 65, 65, 65, 65, 65,],
+                        backgroundColor: '#36A2EB',
+                        borderColor: '#36A2EB',
+                        borderwidth: 2,
+                        fill: false,
+                    },
+                ],
+            },
+        },
+        {
+            id: "grafico3",
+            tipo: "line",
+            dados: {
+                labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',],
+                datasets: [
+                    {
+                        label: "Temperatura (°C)",
+                        data: [16, 16, 16.5, 16.8, 17.17, 17.7, 18, 18.6, 19, 19.2, 19.6, 20, 20.1, 20.4, 20.7, 21, 21, 21, 21, 20, 19, 18.5, 17.9, 17],
+                        backgroundColor: "#3e95cd",
+                        backgroundColor: '#008000',
+                        borderColor: '#008000',
+                        borderwidth: 2
+
+                    },
+                    {
+                        label: 'Umidade (%)',
+                        data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66, 66, 66, 66, 66, 66, 66, 66, 65, 65, 65, 65, 65, 65,],
+                        backgroundColor: '#36A2EB',
+                        borderColor: '#36A2EB',
+                        borderwidth: 2
+                    },
+                ],
+            },
+        },
+        {
+            id: "grafico4",
+            tipo: "line",
+            dados: {
+                labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',],
+                datasets: [
+                    {
+                        label: 'Temperatura (°C)',
+                        data: [16, 16, 16.5, 16.8, 17.17, 17.7, 18, 18.6, 19, 19.2, 19.6, 20, 20.1, 20.4, 20.7, 21, 22, 22.6, 21, 20, 19, 18.5, 17.9, 17],
+                        backgroundColor: '#008000',
+                        borderColor: '#008000',
+                        borderwidth: 2,
+                        fill: false,
+                    },
+                    {
+                        label: 'Umidade (%)',
+                        data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66, 66, 66, 66, 66, 66, 66, 66, 65, 65, 65, 65, 65, 65,],
+                        backgroundColor: '#36A2EB',
+                        borderColor: '#36A2EB',
+                        borderwidth: 2,
+                        fill: false,
+                    },
+                ],
+            }
+            , options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100,
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+    ];
+
+    let Grafico = null;
+
+    function criarGrafico(idGrafico) {
+        const graficoSelecionado = graficos.find((g) => g.id === idGrafico);
+
+        if (Grafico !== null) {
+            Grafico.destroy();
+        }
+
+        const canvas = document.getElementById("Grafico").getContext("2d");
+        Grafico = new Chart(canvas, {
+            type: graficoSelecionado.tipo,
+            data: graficoSelecionado.dados,
+        });
+    }
+
+    criarGrafico("grafico1");
+
+    document.getElementById("Grafico1").addEventListener("click", () => {
+        criarGrafico("grafico1");
+    });
+
+    document.getElementById("Grafico2").addEventListener("click", () => {
+        criarGrafico("grafico2");
+    });
+    document.getElementById("Grafico3").addEventListener("click", () => {
+        criarGrafico("grafico3");
+    });
+    document.getElementById("Grafico4").addEventListener("click", () => {
+        criarGrafico("grafico4");
+    });
+
+
+</script>
 
 </html>

@@ -1,2 +1,117 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins',sans-serif;
+text-decoration: none;
+}
+body {
+background-image: linear-gradient(to bottom,#9eedf9,#47f767a2)   ;
+}
 
+.body-site {
+display: flex;
+height: 100vh;
+}
+.left-size {
+display: flex;
+flex-direction: column;
+width: 40vw;
+height: 100vh;
+}
+
+.graficoVida {
+justify-content: start;
+align-items: start;
+width: 30vw;
+height: 35vh;
+margin-left: 7%;
+margin-top: 5%;
+background-color: transparent;
+border-radius: 30px;
+}
+
+.right-size {
+display: flex;
+flex-direction: column;
+width: 57vw;
+height: 100vh;
+background: transparent;
+border-radius: 30px;
+margin-top: 2%;
+}
+
+.silos {
+display: flex;
+}
+.Grafico1 {
+background: #33dcf7;
+border-radius: 30px;
+margin-left: 4%;
+padding: 5px 7px;
+border: none;
+}
+
+.Grafico2 {
+background: #33dcf7;
+border-radius: 30px;
+margin-left: 4%;
+padding: 5px 7px;
+border: none;
+}
+
+.Grafico3 {
+background: #33dcf7;
+border-radius: 30px;
+padding: 5px 7px;
+margin-left: 4%;
+border: none;
+}
+
+.Grafico4 {
+background: #ff7c7c;
+border-radius: 30px;
+padding: 5px 7px;
+margin-left: 4%;
+border: none;
+}
+
+
+.grafico {
+height: 40vh;
+width: 58vw;
+}
+
+.escala {
+display: flex;
+margin-top: 4%;
+justify-content: center;
+padding: 2%;
+}
+.Escala-Umidade {
+margin-left: 4%;
+}
+
+
+.barra-notify {
+background: #33dcf7;
+border-radius: 30px;
+padding: 10px 15px;
+width: 80%;
+height: 40%;
+}
+
+.barra-notify > h1 {
+margin-right: 10%;
+
+}
+
+.Alert {
+margin-top: 3%;
+margin-left: 16%;
+margin-right: 16%;
+background: #33dcf7;
+border-radius: 30px;
+padding: 10px 15px;
+}
 
