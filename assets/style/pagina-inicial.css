@@ -1,0 +1,434 @@
+@font-face
+{
+    font-family: Righteous-Regular;
+    src: url(Righteous-Regular.ttf);
+}
+@font-face
+{
+    font-family:ABeeZee-Regular;
+    src: url(ABeeZee-Regular.ttf);
+}
+@keyframes plop {
+    
+        
+from{
+ transform: translateY(-30px);
+
+}to{
+    transform:translateY(0px)
+
+}
+
+ 
+    
+}
+body {
+    margin: 0;
+    padding: 0;  
+    background:  url(soja.jpg) fixed no-repeat;
+    background-size: auto;
+    
+}
+.s
+
+{
+    margin: 0;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    
+   
+}
+.navbar {
+    margin: 0px;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    position: relative;
+    right: px;
+    column-gap: 10pc;  
+}
+.im
+{
+    
+    display: flex;    
+    position: relative;
+    top: 20px;
+}
+.text
+{
+    border-radius: 50px;
+    
+
+    
+}
+
+.text:hover
+{
+   
+    margin: 0;
+    padding: 2%;
+    background-color: #53AC46;
+    animation: move 20s linear infinite;
+    
+}
+
+.link
+{
+    font-family: Righteous-Regular;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+}
+.login
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 90px;
+}
+.im:hover
+{
+    
+    animation: plop 1s alternate-reverse infinite;
+}
+/* parte do banner para baixo */
+
+.banner
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+.nav
+{
+    display: flex;
+    height: 30%;
+    width: 25%;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    
+    
+}
+.txt-h1 
+{
+    height: 80px;
+    font-family:ABeeZee-Regular;
+    font-size: 64px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+}
+.nav-2
+{
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 60px;
+    position: relative;
+    top: 60%;
+    right: 12%;
+    text-align: center;
+
+    
+}.txt-p
+{
+    font-family:ABeeZee-Regular;
+    color: white;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;  
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-saiba_mais
+{
+    
+    width: 20%;
+    display: flex;
+    height: 100px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top:80px;
+    left: 40%;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(173, 216, 230, 0.9) 0%, rgba(214, 214, 214, 0.9) 100%);
+    
+}
+.saiba_mais
+{
+  
+    font-family:ABeeZee-Regular;
+    font-size: 32px;
+    color:black;
+}
+
+.saiba_mais a 
+{
+    text-decoration: none;
+    color: black;
+}
+.line
+{
+    width: 60%;
+    display: flex;
+    height: 2px;
+    background-color: #ffff;
+    position: relative;
+    top: 130px;
+    left: 20%;
+}
+.nav-sobre_nos
+{
+    font-family:ABeeZee-Regular;
+    width: 100%;
+    position: relative;
+    top: 180px;
+    color: white;
+    text-align: center;
+}
+.sobre_nos .sobre-nos-txt
+{
+    font-size: 60px;
+    margin: 2%;
+}
+.sobre_nos .paragrafo-txt
+{
+    font-size: 30px;
+    margin: 2%;
+    
+}
+.line-2
+{
+    display: flex;
+    width: 60%;
+    height: 2px;
+    background-color: #ffff;
+    position: relative;
+    top: 220px;
+    left: 20%;
+}
+.conteiner-txt
+{
+    text-align: center;
+    position: relative;
+    top:250px;
+    left: 10%;
+    width: 80%;
+    color: white;
+}
+.txt-integrantes
+{
+    
+    font-family:ABeeZee-Regular;
+    position: relative;
+    left: 30px;
+    font-size:350%
+}
+
+ /* --------------------- carrossel */
+
+.contente
+{
+    
+    position: absolute;
+    top: 75pc;
+    width: 20%;
+    height: 15pc;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+   
+
+}
+.slides
+{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide 
+{
+    transition: .6s;
+    width: 20%;
+    
+}
+.slide img
+{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.slides input
+{
+    display: none;
+}
+.s2 input
+{
+    display: none;
+}
+.navigation
+{
+    
+    position: absolute;
+    width: 30%;
+    top: 300%;
+    height: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    
+}
+
+.barra
+{
+    border: solid white;
+    position: relative;
+    left: 20%;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .6s;
+}
+.barra:hover
+{
+    background: white;
+}
+
+#slide1:checked ~ .s1
+{
+    margin-left: 0px;
+}
+#slide2:checked ~ .s1
+{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1
+{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1
+{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1
+{
+    margin-left: -80%;
+}
+
+.contente2
+{
+    border: solid;
+    position: absolute;
+    top: 230%;
+    width: 40%;
+    height: 15pc;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+
+}
+.s2
+{display: flex;
+    border: solid;
+    width: 500%;
+    height: 100%;
+  
+  
+}
+.slide2
+
+
+{
+    
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+}
+.slide2 span
+{
+    font-size: 50px;
+    color: red;
+}
+#slide1:checked ~ .s3
+{
+    margin-left: 0px;
+}
+#slide2:checked ~ .s3
+{
+    margin-left: -40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slides2 input
+{
+    display: none;
+}
+
+
+
+
+
+.slides2
+{
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    bottom: 20%;
+    border: solid;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+
