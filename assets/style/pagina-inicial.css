@@ -1,12 +1,12 @@
 @font-face
 {
-    font-family: Righteous-Regular;
-    src: url(Righteous-Regular.ttf);
+    font-family: 'ABeeZee', sans-serif;
+    src: url(assets/fonts/ABeeZee-Regular.ttf);
 }
 @font-face
 {
-    font-family:ABeeZee-Regular;
-    src: url(ABeeZee-Regular.ttf);
+    font-family: 'ABeeZee', sans-serif;
+    src: url(assets/fonts/ABeeZee-Regular.ttf);
 }
 @keyframes plop {
     
@@ -25,8 +25,8 @@ from{
 body {
     margin: 0;
     padding: 0;  
-    background:  url(soja.jpg) fixed no-repeat;
-    background-size: auto;
+    background:  url(bg_soja.png) fixed no-repeat;
+    background-size: cover;
     
 }
 .s
@@ -80,7 +80,7 @@ body {
 
 .link
 {
-    font-family: Righteous-Regular;
+    font-family: 'ABeeZee', sans-serif;
     text-decoration: none;
     color: white;
     font-size: 40px;
@@ -127,7 +127,7 @@ body {
 .txt-h1 
 {
     height: 80px;
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     font-size: 64px;
     color: white;
     margin: 0;
@@ -150,7 +150,7 @@ body {
     
 }.txt-p
 {
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     color: white;
     display: flex;
     margin: 0;
@@ -160,30 +160,31 @@ body {
     justify-content: center;
 }
 
-.nav-saiba_mais
+
+.saiba_mais
 {
-    
+  
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 32px;
     width: 20%;
     display: flex;
     height: 100px;
     margin: 0;
+    border: 0;
     align-items: center;
     justify-content: center;
     position: relative;
     top:80px;
     left: 40%;
     border-radius: 50px;
-    background: linear-gradient(180deg, rgba(173, 216, 230, 0.9) 0%, rgba(214, 214, 214, 0.9) 100%);
-    
+    background: linear-gradient(180deg, rgba(173, 216, 230, 0.9)
+     0%, rgba(214, 214, 214, 0.9) 100%);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
-.saiba_mais
-{
-  
-    font-family:ABeeZee-Regular;
-    font-size: 32px;
-    color:black;
+.saiba_mais:hover {
+   background: rgba(173, 216, 230, 0.9) ;
 }
-
 .saiba_mais a 
 {
     text-decoration: none;
@@ -201,7 +202,7 @@ body {
 }
 .nav-sobre_nos
 {
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     width: 100%;
     position: relative;
     top: 180px;
@@ -234,17 +235,16 @@ body {
     text-align: center;
     position: relative;
     top:250px;
-    left: 10%;
-    width: 80%;
     color: white;
 }
 .txt-integrantes
 {
     
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     position: relative;
-    left: 30px;
-    font-size:350%
+    font-size:350%;
+    text-align: center;
+    
 }
 
  /* --------------------- carrossel */
@@ -254,7 +254,7 @@ body {
     
     position: absolute;
     top: 75pc;
-    width: 20%;
+    width: 100%;
     height: 15pc;
     left: 50%;
     transform: translate(-50%);
@@ -265,7 +265,7 @@ body {
 .slides
 {
     display: flex;
-    width: 500%;
+    width: 100%;
     height: 100%;
 }
 .slide 
@@ -276,7 +276,7 @@ body {
 }
 .slide img
 {
-    border-radius: 20px;
+    border-radius: 0px;
     width: 100%;
     height: 100%;
 }
@@ -293,7 +293,7 @@ body {
     
     position: absolute;
     width: 30%;
-    top: 300%;
+    top: 240%;
     height: 10%;
     left: 50%;
     transform: translate(-50%);
@@ -339,18 +339,7 @@ body {
     margin-left: -80%;
 }
 
-.contente2
-{
-    border: solid;
-    position: absolute;
-    top: 230%;
-    width: 40%;
-    height: 15pc;
-    left: 50%;
-    transform: translate(-50%);
-    overflow: hidden;
 
-}
 .s2
 {display: flex;
     border: solid;

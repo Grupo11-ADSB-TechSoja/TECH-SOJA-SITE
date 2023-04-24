@@ -1,5 +1,7 @@
 function verificar() {
 
+    document.getElementById("resultado").classList.add('resultado');
+      
     resultado.style.display = 'inherit'
 
     var preco = Number(in_kg.value)

@@ -40,7 +40,7 @@
 .resultado {
   margin-left: 50px;
   background-color: transparent;
-  padding: 130px;
+  padding: 100px;
   backdrop-filter: blur(12px);
   border: 1px solid white;
   border-radius: 10px;
@@ -49,6 +49,8 @@
   justify-content: center;
   display: none;
   color: white;
+  text-align: center;
+  height: 90%;
 }
 
 #sel_estado option {
@@ -137,4 +139,5 @@ a.button i {
 }
 h1{
   color: yellowgreen;
+  text-align: center;
 }
