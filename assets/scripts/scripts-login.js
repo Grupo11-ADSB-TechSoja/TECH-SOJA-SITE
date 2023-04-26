@@ -7,7 +7,7 @@ function abrir() {
         if (email == "" && senha == "") {
             alert("Por favor, preencha todos os campos.");
             return false;
-        } else if (email && "admin@sptech.school" && senha == "admin") {
+        } else if (email == "admin@sptech.school" && senha == "admin") {
         abrir()
             return true;
         }

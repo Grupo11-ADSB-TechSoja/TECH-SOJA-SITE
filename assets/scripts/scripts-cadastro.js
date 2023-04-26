@@ -1,5 +1,5 @@
 
-    function abrir() {
+    function cadastros() {
         open(window.location.href = 'login.html')
         
     }
@@ -16,8 +16,8 @@
         if (nome == "" && email == "" && senha == "" && validar == "" && cpf == "") {
             alert("Por favor, preencha todos os campos.");
             return false;
-        } else if (nome == "miguel" && email && "miguel@sptech.com" && senha == "091002" && validar == "091002" && cpf == "123.456.789-00") {
-            abrir()
+        } else if (nome == "miguel" && email == "miguel@sptech.com" && senha == "091002" && validar == "091002" && cpf == "123.456.789-00") {
+            cadastros()
             return true;
         }
 

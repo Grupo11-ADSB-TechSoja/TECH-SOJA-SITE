@@ -5,9 +5,7 @@ box-sizing: border-box;
 font-family: 'Poppins',sans-serif;
 text-decoration: none;
 }
-body {
-background-image: linear-gradient(to bottom,#9eedf9,#47f767a2)   ;
-}
+
 
 .body-site {
 display: flex;
@@ -69,7 +67,7 @@ border: none;
 }
 
 .Grafico4 {
-background: #ff7c7c;
+background: red;
 border-radius: 30px;
 padding: 5px 7px;
 margin-left: 4%;
@@ -84,9 +82,14 @@ width: 58vw;
 
 .escala {
 display: flex;
-margin-top: 4%;
+
 justify-content: center;
-padding: 2%;
+
+position: absolute;
+top: 126%;
+left: 50%;
+transform: translate(-15%);
+
 }
 .Escala-Umidade {
 margin-left: 4%;
@@ -115,3 +118,9 @@ border-radius: 30px;
 padding: 10px 15px;
 }
 
+footer
+{
+    position: absolute;
+    top: 140%;
+    width: 100%;
+}
