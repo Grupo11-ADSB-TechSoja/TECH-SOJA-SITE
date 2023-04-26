@@ -270,7 +270,7 @@ body {
 .slides
 {
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 1);
     grid-gap: 30px;
     animation: scroll  5s  linear infinite; 
 }
@@ -285,7 +285,7 @@ body {
 {
     margin: 0;
     display: flex;
-    width: 1448px;
+    width: 1400px;
     align-items: center;
     justify-content: center;
     text-align: center;
