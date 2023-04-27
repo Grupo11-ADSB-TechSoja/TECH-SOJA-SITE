@@ -21,7 +21,7 @@
 }
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(calc(-250px * 5))}
 }
 
 
@@ -37,7 +37,7 @@ body {
 {
     margin: 0;
     width: 100%;
-    height: 180px;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@ body {
 .navbar {
     margin: 0px;
     width: 80%;
-    height: 30px;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -61,7 +61,7 @@ body {
     
     display: flex;    
     position: relative;
-    top: 20px;
+    top: 10px;
 }
 .text
 {
@@ -262,17 +262,22 @@ body {
     top: 180%;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
    
    
 
 }
+
 .slides
 {
+
     display: flex;
-    width: calc(190px * 6);
+    width: calc(240px * 14);
     grid-gap: 30px;
-    animation: scroll  5s  linear infinite;  
+    position: relative;
+    animation: scroll  10s  linear infinite;      
+     left: 1085px;
+
 }
 .slide p{
     font-family: 'ABeeZee', sans-serif;
@@ -283,14 +288,15 @@ body {
 }
 .slide 
 {
-    margin: 0;
+    
     display: flex;
-    width: 1800px;
+    width: 180px;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-       
+    
+    
      
    
 
@@ -299,8 +305,8 @@ body {
 .slide img
 {
     border-radius: 100%;
-    padding: 10px;
-    width: 200px;
+    padding: 9px;
+    width: 175px;
     height: 45%;
 
 }
