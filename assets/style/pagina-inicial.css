@@ -259,10 +259,10 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 180%;
+    top: 160%;
     width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
+    height: 80%;
+     overflow: hidden; 
    
    
 
@@ -275,8 +275,8 @@ body {
     width: calc(240px * 14);
     grid-gap: 30px;
     position: relative;
-    animation: scroll  10s  linear infinite;      
-     left: 1085px;
+    animation: scroll  9s  linear infinite;       
+     left: 1080px;
 
 }
 .slide p{
@@ -305,8 +305,7 @@ body {
 .slide img
 {
     border-radius: 100%;
-    padding: 9px;
-    width: 175px;
+    width: 174px;
     height: 45%;
 
 }
@@ -314,7 +313,23 @@ body {
 {
     display: none;
 }
-
+footer
+{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 230%;
+}
+footer p
+{
+    color: azure;
+    position: absolute;
+    
+}
 
 
 
