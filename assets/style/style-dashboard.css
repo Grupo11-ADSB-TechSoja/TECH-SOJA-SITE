@@ -76,7 +76,7 @@ border: none;
 }
 
 .Grafico4 {
-background: #ff7c7c;
+background: red;
 border-radius: 30px;
 border: none;
 }
@@ -90,9 +90,14 @@ margin-right: 3%;
 
 .escala {
 display: flex;
-margin-top: 4%;
+
 justify-content: center;
-padding: 2%;
+
+position: absolute;
+top: 126%;
+left: 50%;
+transform: translate(-15%);
+
 }
 .Escala-Umidade {
 margin-left: 4%;
@@ -133,3 +138,9 @@ h1{
     margin: 5%;
 }
 
+footer
+{
+    position: absolute;
+    top: 140%;
+    width: 100%;
+}
