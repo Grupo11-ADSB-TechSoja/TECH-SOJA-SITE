@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="./assets/style/redefinir.css">
+  <link rel="stylesheet" href="./assets/style/style-index.css">
+  <link rel="icon" href="./assets/img/logo.png">
+</head>
+<body>
+
+
+
+  <div class="s">
+    <div class="im"><a href="Pagina-inicial.html"><img  style="width: 170px; height: 140px;" src="./assets/img/logo.png"></a></div>
+    <div class="navbar">
+        <div class="text"><a class="link" href="./contato.html">Contato</a></div>
+        <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
+        <div class="text"><a class="link" href="./login.html">Área cliente</a></div>
+    </div>
+</div>
+
+
+
+  <div class="container">
+    <h1>Redefinir Senha</h1>
+    <p>Informe o seu email cadastrado para receber as instruções de como redefinir sua senha.</p>
+
+<div class="amem">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <button  onclick="avaliar()">Enviar Instruções</button>
+   
+</div>
+  </div>
+
+</body>
+</html>
+<script>
+
+
+
+function proximo(){
+    open(window.location.href = './login.html')
+}
+
+function avaliar(){
+
+
+var teste = email.value
+
+
+
+if (teste == "" ) {
+            alert("Por favor, preencha o campo.");
+            return false;
+        } else if (teste != "techsoja@gmail.com") {
+        alert("Email  incorreto!")
+            return false;
+        }else{
+            proximo()
+            return true;
+        }
+}
+
+
+
+
+
+</script>
