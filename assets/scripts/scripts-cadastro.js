@@ -11,14 +11,17 @@
         var senha = document.getElementById("field-password").value
         var validar = document.getElementById("field-password").value
         var cpf = document.getElementById("cpf").value
+        var silo = document.getElementById("silo").value
 
 
-        if (nome == "" && email == "" && senha == "" && validar == "" && cpf == "") {
+        if (nome == "" && email == "" && senha == "" && validar == "" && cpf == "" && silo == "") {
             alert("Por favor, preencha todos os campos.");
             return false;
-        } else if (nome == "miguel" && email == "miguel@sptech.com" && senha == "091002" && validar == "091002" && cpf == "123.456.789-00") {
-            cadastros()
+        } else if (nome != "miguel" && email != "miguel@sptech.com" && senha != "091002" && validar != "091002" && cpf != "123.456.789-00" && silo != "4") {
+          alert("Algum dado esta inserido incorretamente")
             return true;
+        }else{
+            cadastros()
         }
 
 
