@@ -4,114 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Golos+Text&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style-index.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./assets/style/style-dashboard.css">
-    <title>Dashboards</title>
+    <link rel="stylesheet" href="./assets/style/styles.css">
+    <title>Dashboard</title>
 </head>
 
 <body>
-    <header>
-        <div class="s">
-            <div class="im"><a href="./TELAinicial.html"><img style="width: 220px; height: 180px;"
-                        src="./assets/img/logo.png"></a></div>
-            <div class="navbar">
-                <div class="text"><a class="link" href="./contato.html">Contato</a></div>
-                <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
-                <div class="text"><a class="link" href="./TELAinicial.html">Sair</a></div>
-            </div>
-    </header>
-
-    <main>
-        <div class="body-site">
-
-            <div class="left-size">
-                <div class="graficoVida">
-
-                    <h1>Saúde dos Silos</h1><br><br>
-
-                    <canvas id="VidaSilos"></canvas>
-
-                </div><br><br><br><br><br><br>
-                <div class="barra-Notify">
-
-                    <center>
-                        <h1>Alertas</h1>
-                    </center>
-
-                    <div class="alertas">
-
-                        <div class="Alert">
-                            <h2>O silo 4 está apresentando Temperaturas acima do ideal no(s) horário(s): 16:00, 17:00
-                            </h2>
-                        </div>
-
+    <div class="container">
+        <header>
+            <div class="s">
+                <div class="im"><a href="./Pagina-inicial.html"><img style="width: 170px; height: 140px;"
+                            src="./assets/img/logo.png"></a></div>
+                <div class="navbar">
+                    <div class="text"><a class="link" href="./contato.html">Contato</a></div>
+                    <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
+                    <div class="text"><a class="link" href="./Pagina-inicial.html">Sair</a></div>
+                </div>
+        </header>
+        
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Alertas</div>
+                        <div class="number">O silo 4 está apresentando Temperaturas acima do ideal no(s) horário(s): 16:00, 17:00</div>
                     </div>
+                    <div class="icon-box">
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Silos</div>
+                        <div class="number">4</div>
+                    </div>
+                    <div class="icon-box">
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Temperatura Ideal</div>
+                        <div class="number">Entre 16° e 21°</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class=""></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Umidade Ideal</div>
+                        <div class="number">Entre 65% e 66%</div>
+                    </div>
+                    <div class="icon-box">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="silos">
 
+                <div class="Silo1">
+                    <button id="Grafico1" class="Grafico1">
+                        <img src="./assets/img/Silo1.png">
+                    </button>
+                </div>
+
+                <div class="Silo2">
+                    <button id="Grafico2" class="Grafico2">
+                        <img src="./assets/img/Silo2.png">
+                    </button>
+                </div>
+
+                <div class="Silo3">
+                    <button id="Grafico3" class="Grafico3">
+                        <img src="./assets/img/SIlo3.png">
+                    </button>
+                </div>
+
+                <div class="Silo4">
+                    <button id="Grafico4" class="Grafico4">
+                        <img src="./assets/img/Silo4.png">
+                    </button>
                 </div>
 
             </div>
-
-            <div class="right-size">
-
-                <center>
-                    <h1>Silos</h1>
-                </center> <br> <br>
-
-                <div class="silos">
-
-                    <div class="Silo1">
-                        <button id="Grafico1" class="Grafico1">
-                            <img src="./assets/img/Silo1.png">
-                        </button>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Grafico</h2>
+                    <div>
+                        <canvas id="Grafico"></canvas>
                     </div>
-
-                    <div class="Silo2">
-                        <button id="Grafico2" class="Grafico2">
-                            <img src="./assets/img/Silo2.png">
-                        </button>
+                </div>
+                <div class="chart doughnut-chart">
+                    <h2>Saúde dos Silos</h2>
+                    <div>
+                        <canvas id="VidaSilos"></canvas>
                     </div>
-
-                    <div class="Silo3">
-                        <button id="Grafico3" class="Grafico3">
-                            <img src="./assets/img/SIlo3.png">
-                        </button>
-                    </div>
-
-                    <div class="Silo4">
-                        <button id="Grafico4" class="Grafico4">
-                            <img src="./assets/img/Silo4.png">
-                        </button>
-                    </div>
-
-                </div><br>
-
-
-                <canvas id="Grafico"></canvas>
-
-                <div class="escala">
-
-                    <div class="Escala-Temperatura">
-                        <img src="./assets/img/Legenda-Temperatura.png">
-                    </div>
-
-                    <div class="Escala-Umidade">
-                        <img src="./assets/img/Legenda-Umidade.png">
-                    </div>
-
                 </div>
             </div>
         </div>
-    </main>
-
+    </div>
     <footer>
         <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
     </footer>
-
 </body>
-
 <script>
 
     const VidaSilos = document.getElementById('VidaSilos');
@@ -302,5 +305,4 @@
 
 
 </script>
-
 </html>

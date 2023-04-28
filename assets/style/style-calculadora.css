@@ -128,12 +128,10 @@ a.button i {
 }
 
 .banner {
-  background-size: 100%;
   padding: 260px 0;
 }
 
 .banner .container {
-  height: 350px;
   align-items: center;
   justify-content: center;
 }

@@ -1,72 +1,79 @@
 .container{
-    background-image: linear-gradient(to bottom,#9eedf9,#47f767a2)   ;
-}
+    font-family: 'ABeeZee', sans-serif;
+    font-family: 'Golos Text', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #f6ecec, #ede6e8, #e5e1e3, #dddcdd, #d6d6d6);
 
+}
+.banner1{
+    margin:2% ;
+}
+.container1{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
 
 .caixaM {
-    background:#caf4c6;
+    color: black;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-     justify-content: center;
-    margin-right: 400px;
-    margin-left: 45px;
-    width: fit-content;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    border: 1px  solid white;
+    margin: 2%;
+    
+    
+    
+}
+.caixaM h1{
+    color: green;
+}
+.caixaVI {
+    color: black;
+    padding: 20px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    border: 1px  solid white;
+    margin: 2%;
+    
+    
     
 }
 
-.caixaM h1 {
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px;
-}
-.caixaVI {
-    background-color:#caf4c6;
-    padding: 20px 20px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin-left: 400px;
-    margin-right: 45px;
+.caixaVI h1{
+    color: green;
 }
 
-.caixaVI h1 {
-    color: green;
-    margin-bottom: 10px;
-}
 .caixaVA {
-    background-color:#caf4c6;
+    color: black;
     padding: 20px 20px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    margin-right: 400px;
-    margin-left: 45px;
+    backdrop-filter: blur(12px);
+    border: 1px  solid white;
+    margin: 2%;
 }
 
 .caixaVA h1 {
     color: green;
     margin-bottom: 10px;
 }
-
-.banner1{
-   
-    background-color: transparent;
-    height: fit-content;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-
-    
-}  
 
 .img_fundo_missao{
 
@@ -83,12 +90,11 @@
     width: 100%;
     height: 350px;
     margin: 50px;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 .img_fundo_visao{
 
-    background-color: gray;
     padding: 20px 20px;
     border-radius: 60px;
     display: flex;
@@ -101,8 +107,8 @@
     width: 100%;
     height: 350px;
     margin: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
-
 }
 .img_fundo_valores{
 
@@ -112,50 +118,42 @@
     margin-left: 400px;
     margin-right: 45px;
     background-size: cover;
-    background-image: url(./colab_fazenda.jpg);
+    background-image: url(./pexels-spencer-selover-775417.jpg);
     width: 100%;
     height: 350px;
     margin: 50px;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 
 .banner2{
-    background-color: transparent;
-    height: 600px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     
+    margin:2% ;
 }  
+
+.container2{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .banner3{
     
-    background-color: transparent;
-    height: 600px;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-   
+   margin:2% ;  
+   margin-bottom: 3%;
 }  
-.txtM h2{
-
-    color: black;
+.container3{
+    background-color: white;
     display: flex;
-}
-
-.txtVI h2{
-
-    color: black;
-    display: flex;
-}
-
-.txtVA h2{
-
-    color: black;
-    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

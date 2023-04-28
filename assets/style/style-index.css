@@ -1,12 +1,12 @@
 @font-face
 {
-    font-family: Righteous-Regular;
-    src: url(/assets/fonts/Righteous-Regular.ttf);
+    font-family: 'ABeeZee', sans-serif;
+    src: url(assets/fonts/ABeeZee-Regular.ttf);
 }
 @font-face
 {
-    font-family:ABeeZee-Regular;
-    src: url(/assets/fonts/);
+    font-family: 'ABeeZee', sans-serif;
+    src: url(assets/fonts/ABeeZee-Regular.ttf);
 }
 @keyframes move {
 
@@ -43,7 +43,7 @@ body {
 {
     margin: 0;
     width: 100%;
-    height: 180px;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +91,7 @@ body {
 
 .link
 {
-    font-family: Righteous-Regular;
+    font-family: 'ABeeZee', sans-serif;
     text-decoration: none;
     color: white;
     font-size: 40px;
@@ -113,7 +113,7 @@ body {
 {
     display: flex;
     height: 400px;
-    border: solid;  
+     
     justify-content: center;
     background-image: url(./soja.jpg);
     background-size: cover;
@@ -139,7 +139,7 @@ body {
 .txt-h1 
 {
     height: 160px;
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     font-size: 64px;
     color: white;
     margin: 0;
@@ -165,7 +165,7 @@ body {
     
 }.txt-p
 {
-    font-family:ABeeZee-Regular;
+    font-family: 'ABeeZee', sans-serif;
     color: white;
     display: flex;
     margin: 0;
@@ -176,8 +176,10 @@ body {
 }
 
 footer {
-    padding: 30px 0;
-    background-color: #383c42;
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
 }
 
 footer p {

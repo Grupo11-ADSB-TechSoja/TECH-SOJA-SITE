@@ -6,80 +6,86 @@ font-family: 'Poppins',sans-serif;
 text-decoration: none;
 }
 body {
-background-image: linear-gradient(to bottom,#9eedf9,#47f767a2)   ;
+background-color: aliceblue   ;
 }
 
 .body-site {
 display: flex;
-height: 100vh;
+height: 100%;
+width: 100%;
 }
 .left-size {
 display: flex;
 flex-direction: column;
-width: 40vw;
-height: 100vh;
+justify-content: center;
+align-items: center;
+width: 50%;
+height: 100%;
 }
 
 .graficoVida {
-justify-content: start;
-align-items: start;
-width: 30vw;
-height: 35vh;
-margin-left: 7%;
-margin-top: 5%;
+justify-content: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 50%;
+height: 50%;
 background-color: transparent;
 border-radius: 30px;
+
 }
 
 .right-size {
 display: flex;
+align-items: center;
+justify-content: center;
 flex-direction: column;
-width: 57vw;
-height: 100vh;
+width: 50%;
+height: 50%;
 background: transparent;
 border-radius: 30px;
-margin-top: 2%;
 }
 
 .silos {
+    gap: 3%;
+width: 100%;
 display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 5%;
+padding: 2%;
+border-radius: 20px;
+box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 .Grafico1 {
 background: #33dcf7;
 border-radius: 30px;
-margin-left: 4%;
-padding: 5px 7px;
 border: none;
 }
 
 .Grafico2 {
 background: #33dcf7;
 border-radius: 30px;
-margin-left: 4%;
-padding: 5px 7px;
 border: none;
 }
 
 .Grafico3 {
 background: #33dcf7;
 border-radius: 30px;
-padding: 5px 7px;
-margin-left: 4%;
 border: none;
 }
 
 .Grafico4 {
 background: #ff7c7c;
 border-radius: 30px;
-padding: 5px 7px;
-margin-left: 4%;
 border: none;
 }
 
 
-.grafico {
-height: 40vh;
-width: 58vw;
+.grafico_linha {
+height: 100%;
+width: 100%;
+margin-right: 3%;
 }
 
 .escala {
@@ -107,11 +113,23 @@ margin-right: 10%;
 }
 
 .Alert {
-margin-top: 3%;
-margin-left: 16%;
-margin-right: 16%;
-background: #33dcf7;
+background: rgb(248, 248, 111);
 border-radius: 30px;
 padding: 10px 15px;
+
+}
+.alertas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10%;
+    border-top: 2px solid black;
+    padding-top:5% ;
+}
+h1{
+    text-align: center;
+    margin: 5%;
 }
 
