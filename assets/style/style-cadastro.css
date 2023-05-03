@@ -57,7 +57,7 @@ main {
     height: 100%;
     width: 100%;
     min-width: 100%;
-    background-image: url(./bg_cadastro.jpg);
+    background-image: url(./bg_cadastro.png);
     background-size: cover;
     align-items: center;
     display: flex;
