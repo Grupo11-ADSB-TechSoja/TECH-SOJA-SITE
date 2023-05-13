@@ -112,3 +112,12 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+.teste{
+    background-color: #4CAF50;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
