@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style-cadastro.css">
+    <link rel="stylesheet" href="./assets/style/style-index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Golos+Text&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/logo.png">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+
+    <div class="s">
+        <div class="im"><a href="Pagina-inicial.html"><img style="width: 170px; height: 140px;"
+                    src="./assets/img/logo.png "></a></div>
+        <div class="navbar">
+            <div class="text"><a class="link" href="./contato.html">Contato</a></div>
+            <div class="text"><a class="link" href="./calculadora.html">Simule</a></div>
+            <div class="text"><a class="link" href="./login.html">Área cliente</a></div>
+        </div>
+    </div>
+
+    <main>
+        <div id="form" method="">
+            <span class="cadastre-se">Cadastre-se</span>
+            <div>
+                <section class="inputs-container"><br>
+                    Nome:
+                    <input type="text" id="nome_input" placeholder="Seu nome"><br>
+                    Email:
+                    <input type="email" id="email_input" placeholder="Email">
+                    <div class="password-container">
+                        Senha:
+                        <input type="password" id="senha_input" class="field-password" placeholder="Senha"><br>
+                        Confirme sua senha:
+                        <input type="password" id="confirmacao_senha_input" class="field-password"
+                            placeholder="Confirme a senha"><br>
+                        CPF:
+                        <input type="text" id="cpf_input" placeholder="123.456.789-0x">
+                    </div><br>
+                    <button class="but-cadastro" id="but-cadastro" onclick="cadastrar()">Efetuar
+                            Cadastro</></button>
+                </section>
+            </div><br>
+
+
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var cpfVar = cpf_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || cpfVar == "") {
+            alert("Mensagem de erro para todos os campos em branco");
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                cpfServer: cpfVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                setTimeout(() => {
+                    window.location = "LOGIN.html";
+                }, "2000")
+
+            } else {
+                alert("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        console.log('erro')
+    }
+</script>
