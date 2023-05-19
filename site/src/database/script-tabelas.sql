@@ -5,9 +5,8 @@
 /*
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
-create database teste;
-use teste;
-
+create database techsoja;
+use techsoja;
 create table representante(
 idRepresentante INT PRIMARY KEY auto_increment,
 Nome VARCHAR(45),
