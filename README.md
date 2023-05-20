@@ -1,7 +1,8 @@
-
+    TECHSOJA
 
     
-[sojinha](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/2ba79cf4-8c73-41ed-9e33-9f3410bce2d9)
+![sojinha](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/fcc8a804-bcc2-4dee-82ae-7f0a9ec679db)
+
 
 
 
