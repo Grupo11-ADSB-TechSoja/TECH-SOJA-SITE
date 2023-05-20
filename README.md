@@ -1,10 +1,11 @@
     TECHSOJA
+    
 
-![sojinha](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/2ba79cf4-8c73-41ed-9e33-9f3410bce2d9)
+    ![sojinha](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/2ba79cf4-8c73-41ed-9e33-9f3410bce2d9)
 
 
 
-    Plantando Soluções, colhhendo desenvolvimento
+    Plantando Soluções, colhendo desenvolvimento
 
     Uma Empresa de Monitoramento de Temperatura e Umidade em Armazenamento de Grãos de Soja
 
