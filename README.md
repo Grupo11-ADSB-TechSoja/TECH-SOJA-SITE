@@ -1,6 +1,7 @@
     TECHSOJA
 
-    ![logo](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/c5c220e1-10cf-4614-a058-38cba7905418)
+![sojinha](https://github.com/Grupo11-ADSB-TechSoja/TECH-SOJA-SITE/assets/125837411/2ba79cf4-8c73-41ed-9e33-9f3410bce2d9)
+
 
 
     Plantando Soluções, colhhendo desenvolvimento
