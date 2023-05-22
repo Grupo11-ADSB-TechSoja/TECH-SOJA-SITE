@@ -20,7 +20,7 @@ function buscarUltimasMedidas(idSensor, limite_linhas) {
                         DATE_FORMAT(datahora, '%H:%i') as dtHora
                     from historico_medicoes
                     where fkSensor = ${idSensor}
-                    order by fkSensor desc`;
+                    order by fkSensor desc limit 10`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -49,7 +49,7 @@ function buscarMedidasEmTempoReal(idSensor) {
                 umidade,
                 DATE_FORMAT(datahora, '%H:%i') as dtHora
                     from historico_medicoes where fkSensor = ${idSensor}
-                    order by datahora desc`;
+                    order by datahora desc limit 8`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
