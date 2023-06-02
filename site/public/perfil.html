@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./assets/style/perfil.css">
+    <link rel="icon" href="./assets/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Golos+Text&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 style="color: white;"> Meu Perfil</h1>
+        
+    <main class="container">
+        <div class="imagemFundo">
+            <img src="./assets/img/miguel.jpeg" alt="Foto de Perfil">
+            <div class="mensagem">
+                <h3>Olá, <span id="b_usuario">usuário</span></h3>
+
+                <p>Email: <span id="b_usuario2">email</span>
+                </p>
+                <a href="dashboard.html">Voltar</a>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
+<script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario2.innerHTML = sessionStorage.EMAIL_USUARIO;
+</script>
