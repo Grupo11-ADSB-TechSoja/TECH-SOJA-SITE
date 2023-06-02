@@ -12,9 +12,29 @@ idRepresentante INT PRIMARY KEY auto_increment,
 Nome VARCHAR(45),
 Email VARCHAR(80),
 CPF CHAR(11),
-Senha VARCHAR(45),
-fkLogradouro INT,
-constraint fkLogradouroSilo foreign key (fkLogradouro) references logradouro(idLogradouro)
+Senha VARCHAR(45)
+);
+ 
+ show tables;
+
+create table Aviso (
+idAvisos int auto_increment,
+fkRepresentante int,
+Titulo varchar(45),
+Descricao text,
+constraint fkAvisoRepresentante foreign key (fkRepresentante) references representante(idRepresentante),
+constraint pkAvisoRepresentante primary key (idAvisos, fkRepresentante)
+);
+
+create table Funcionario (
+fkRepresentante int,
+fkLogradouro int,
+Nome varchar(45),
+Email varchar(45),
+Telefone char(11),
+constraint fkRepresetanteFunioario foreign key (fkRepresentante) references representante(idRepresentante),
+constraint fkLogradouroFuncionario foreign key (fkLogradouro) references logradouro(idLogradouro),
+constraint pkRepesentanteLogradouro primary key (fkRepresentante, fkLogradouro)
 );
 
 create table logradouro(
@@ -30,6 +50,7 @@ Cidade VARCHAR(45)
 create table Silo(
 idSilo INT PRIMARY KEY auto_increment,
 fkLogradouro INT,
+qtdSilos int,
 constraint fkSiloLogradouro foreign key (fkLogradouro) references logradouro(idLogradouro)
 );
 
@@ -50,6 +71,7 @@ umidade int,
 constraint fkMedicaoSensor foreign key (fkSensor) references sensor(idSensor),
 primary key (fkSensor,dataHora)
 );
+
 /*
 comandos para criar usuário em banco de dados azure, sqlserver,
 com permissão de insert + update + delete + select

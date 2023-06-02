@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-name">Alertas</div>
-                        <div class="number">O silo está apresentando Temperaturas e umidade acima do ideal no(s) horário(s): 16:00, 17:00</div>
+                        <div class="number" id="div_mensagem"></div>
                     </div>
                     <div class="icon-box">
                         
@@ -54,22 +54,15 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-name">Temperatura Ideal</div>
-                        <div class="number">Entre 16° e 21°</div>
+                        <img src="./assets/img/Screenshot_1.png" alt="">
                     </div>
                     <div class="icon-box">
                         <i class=""></i>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-name">Umidade Ideal</div>
-                        <div class="number">Entre 65% e 66%</div>
-                    </div>
-                    <div class="icon-box">
-                        
-                    </div>
-                </div>
-            </div>
+            
+
+                
             <div class="silos">
 
                 <div class="Silo1">
@@ -97,6 +90,8 @@
     <footer>
         <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
     </footer>
+
+
 </body>
 <script>
 
@@ -184,8 +179,7 @@
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-    }
-
+        }
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
@@ -382,9 +376,6 @@
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
     function atualizarGrafico(idSensor, dados, myChart) {
-
-
-
         fetch(`/medidas/tempo-real/${idSensor}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
@@ -418,6 +409,36 @@
                         dados.datasets[1].data.push(novoRegistro[0].umidade); // incluir uma nova medida de temperatura
 
                         myChart.update();
+
+                        //ALERTA TEMPERATURA
+                        if(novoRegistro[0].temperatura <= 10 || novoRegistro[0].temperatura >= 25){
+                            div_mensagem.style.backgroundColor = "red"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                        }else if(novoRegistro[0].temperatura >= 11 || novoRegistro[0].temperatura <= 15 || novoRegistro[0].temperatura >= 22 || novoRegistro[0].temperatura <= 24){
+                            div_mensagem.style.backgroundColor = "yellow"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                        }else if(novoRegistro[0].temperatura >= 16 || novoRegistro[0].temperatura <= 21){
+                            div_mensagem.style.backgroundColor = "green"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                        }
+
+                        //ALERTA UMIDADE
+                        if(novoRegistro[0].umidade <= 60 || novoRegistro[0].umidade >= 70){
+                            div_mensagem.style.backgroundColor = "red"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                        }else if(novoRegistro[0].umidade >= 61 || novoRegistro[0].umidade <= 64 || novoRegistro[0].umidade >= 67 || novoRegistro[0].umidade <= 69){
+                            div_mensagem.style.backgroundColor = "yellow"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                        }else if(novoRegistro[0].umidade >= 65 || novoRegistro[0].umidade <= 66){
+                            div_mensagem.style.backgroundColor = "green"
+                            div_mensagem.style.color = "black"
+                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                        }
                     }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
@@ -445,11 +466,6 @@
             Grafico.destroy();
         }
 
-        const canvas = document.getElementById("Grafico").getContext("2d");
-        Grafico = new Chart(canvas, {
-            type: graficoSelecionado.tipo,
-            data: graficoSelecionado.dados,
-        });
     }
 
     criarGrafico("grafico1");
@@ -458,15 +474,146 @@
         criarGrafico("grafico1");
     });
 
-    document.getElementById("Grafico2").addEventListener("click", () => {
-        criarGrafico("grafico2");
-    });
-    document.getElementById("Grafico3").addEventListener("click", () => {
-        criarGrafico("grafico3");
-    });
-    document.getElementById("Grafico4").addEventListener("click", () => {
-        criarGrafico("grafico4");
-    });
+ 
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //ALERTAS !!!
+/*    var alertas = [];
+
+function obterdados(idSensor) {
+    fetch(`/medidas/tempo-real/${idSensor}`)
+        .then(resposta => {
+
+            if (resposta.ok) {
+                resposta.json().then(resposta => {
+
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    plotarGrafico(resposta,idSensor)
+                    alertar(resposta, idSensor);
+
+                    
+                });
+            } else {
+
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+        });
+
+}
+
+function alertar(resposta, idSensor) {
+    var temp = resposta[0].temperatura;
+
+    console.log(idSensor === resposta[0].fkSensor)
+    
+    var grauDeAviso ='';
+
+
+    var limites = {
+        muito_quente: 23,
+        quente: 22,
+        ideal: 20,
+        frio: 10,
+        muito_frio: 5
+    };
+
+    var classe_temperatura = 'cor-alerta';
+
+    if (temp >= limites.muito_quente) {
+        classe_temperatura = 'cor-alerta perigo-quente';
+        grauDeAviso = 'perigo quente'
+        grauDeAvisoCor = 'cor-alerta perigo-quente'
+        exibirAlerta(temp, idSensor, grauDeAviso, grauDeAvisoCor)
+    }
+    else if (temp < limites.muito_quente && temp >= limites.quente) {
+        classe_temperatura = 'cor-alerta alerta-quente';
+        grauDeAviso = 'alerta quente'
+        grauDeAvisoCor = 'cor-alerta alerta-quente'
+        exibirAlerta(temp, idSensor, grauDeAviso, grauDeAvisoCor)
+    }
+    else if (temp < limites.quente && temp > limites.frio) {
+        classe_temperatura = 'cor-alerta ideal';
+        removerAlerta(idSensor);
+    }
+    else if (temp <= limites.frio && temp > limites.muito_frio) {
+        classe_temperatura = 'cor-alerta alerta-frio';
+        grauDeAviso = 'alerta frio'
+        grauDeAvisoCor = 'cor-alerta alerta-frio'
+        exibirAlerta(temp, idSensor, grauDeAviso, grauDeAvisoCor)
+    }
+    else if (temp <= limites.muito_frio) {
+        classe_temperatura = 'cor-alerta perigo-frio';
+        grauDeAviso = 'perigo frio'
+        grauDeAvisoCor = 'cor-alerta perigo-frio'
+        exibirAlerta(temp, idSensor, grauDeAviso, grauDeAvisoCor)
+    }
+
+    var card;
+
+    if (idSensor == 1) {
+        temp_aquario_1.innerHTML = temp + "°C";
+        card = card_1
+    } else if (idAquario == 2) {
+        temp_aquario_2.innerHTML = temp + "°C";
+        card = card_2
+    } else if (idAquario == 3) {
+        temp_aquario_3.innerHTML = temp + "°C";
+        card = card_3
+    } else if (idAquario == 4) {
+        temp_aquario_4.innerHTML = temp + "°C";
+        card = card_4
+    }
+
+    card.className = classe_temperatura;
+}
+
+function exibirAlerta(temp, idSensor, grauDeAviso, grauDeAvisoCor) {
+    var indice = alertas.findIndex(item => item.idSensor == idSensor);
+
+    if (indice >= 0) {
+        alertas[indice] = { idSensor, temp, grauDeAviso, grauDeAvisoCor }
+    } else {
+        alertas.push({ idSensor, temp, grauDeAviso, grauDeAvisoCor });
+    }
+
+    exibirCards();
+    
+// Dentro da div com classe grauDeAvisoCor há um caractere "invisível", 
+// que pode ser inserido clicando com o seu teclado em alt+255 ou pelo código adicionado acima.
+}
+
+function removerAlerta(idSensor) {
+    alertas = alertas.filter(item => item.idSensor != idSensor);
+    exibirCards();
+}
+ 
+function exibirCards() {
+    alerta.innerHTML = '';
+
+    for (var i = 0; i < alertas.length; i++) {
+        var mensagem = alertas[i];
+        alerta.innerHTML += transformarEmDiv(mensagem);
+    }
+}
+
+function transformarEmDiv({ idSensor, temp, grauDeAviso, grauDeAvisoCor }) {
+    return `<div class="card">
+    <div class="card-content">
+    <div class="${grauDeAvisoCor}">&#12644;</div> 
+     <h3>Aquário ${idSensor} está em estado de ${grauDeAviso}!</h3>
+    <small>Temperatura ${temp}.</small>   
+    </div>
+    <div class="alarme-sino"></div>
+    </div>`;
+}
+*/
+
+ 
 
 
 </script>
