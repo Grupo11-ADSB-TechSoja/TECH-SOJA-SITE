@@ -20,7 +20,13 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-
+.content-navbara
+{
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    
+}
 
 .caixaM {
     color: black;

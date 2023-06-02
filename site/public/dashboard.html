@@ -20,13 +20,12 @@
 <body>
     <div class="container">
         <header>
-            <div class="s">
-                <div class="im"><a href=""><img style="width: 170px; height: 140px;"
+            <div class="s" style="height: 60%;">
+                <div class="im"><a href=""><img style="width: 130px; height: 110px;"
                             src="./assets/img/logo.png"></a></div>
                 <div class="navbar">
                     <div class="text"><a class="link" href="https://techsoja-help.freshdesk.com/support/home">Suporte</a></div>
                     <div class="text"><a class="link" href="perfil.html">Perfil</a></div>
-                    
                     <div class="text"><a class="link" href="./index.html">Sair</a></div>
                 </div>
         </header>
@@ -37,21 +36,13 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-name">Alertas</div>
-                        <div class="number" id="div_mensagem"></div>
+                        <div class="Temperatura" id="div_Temperatura">Temepratura está alta = 30</div>
+                        <div  class="Umidade" id="div_Umidade">Umidade está alta = 75</div>
                     </div>
                     <div class="icon-box">
-                        
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-name">Silos</div>
-                        <div class="number">1</div>
-                    </div>
-                    <div class="icon-box">
-                        
-                    </div>
-                </div>
+                
                 <div class="card">
                     <div class="card-content">
                         <div class="card-name">Temperatura Ideal</div>
@@ -61,33 +52,27 @@
                         <i class=""></i>
                     </div>
                 </div>
-            
-
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <h2>Grafico</h2>
+                <canvas id="myChartCanvas1"></canvas>
+            </div>
+            <div class="alerts_pop_up">
                 
+            </div>
             <div class="silos">
-
                 <div class="Silo1">
                     <button id="Grafico1" class="Grafico1">
                         <img src="./assets/img/Silo1.png">
                     </button>
                 </div>
             </div>
-            <div class="charts">
-                <div class="chart">
-                    <h2>Grafico</h2>
-                    <div>
-                        <canvas id="myChartCanvas1"></canvas>
-                    </div>
-                </div>
-                <div class="chart doughnut-chart">
-                    <h2>Saúde dos Silos</h2>
-                    <div>
-                        <canvas id="VidaSilos"></canvas>
-                    </div>
-                </div>
+            </div>
+            
             </div>
         </div>
-    </div>
     <footer>
         <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
     </footer>
@@ -235,7 +220,7 @@
                     {
                         label: 'Umidade (%)',
                         data: [],
-                        backgroundColor: '#36A2EB',
+                        backgroundColrds : '#36A2EB',
                         borderColor: '#36A2EB',
                         borderwidth: 2,
                         fill: false,
@@ -293,7 +278,7 @@
                 ],
             }
             , options: {
-                animations: {
+                animations: { 
                     tension: {
                         duration: 1000,
                         easing: 'linear',
@@ -322,12 +307,7 @@
                     backgroundColor: "#3e95cd",
                     backgroundColor: '#008000',
                     borderColor: '#008000',
-                    borderwidth: 2
-
-                },
-                {
-                    label: "Umidade(%)",
-                    data: [],
+                    borderwidth: 2, 
                     backgroundColor: "#3e95cd",
                     backgroundColor: '#36A2EB',
                         borderColor: '#36A2EB',
@@ -345,7 +325,7 @@
             dados.labels.push(registro.dtHora);
             dados.datasets[0].data.push(registro.temperatura);
             dados.datasets[1].data.push(registro.umidade);
-        }
+        }rds .card 
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
@@ -413,32 +393,32 @@
 
                         //ALERTA TEMPERATURA
                         if(novoRegistro[0].temperatura <= 10 || novoRegistro[0].temperatura >= 25){
-                            div_mensagem.style.backgroundColor = "red"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                            div_Temperatura.style.backgroundColor = "red"
+                            div_Temperatura.style.color = "black"
+                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
                         }else if(novoRegistro[0].temperatura >= 11 || novoRegistro[0].temperatura <= 15 || novoRegistro[0].temperatura >= 22 || novoRegistro[0].temperatura <= 24){
-                            div_mensagem.style.backgroundColor = "yellow"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                            div_Temperatura.style.backgroundColor = "yellow"
+                            div_Temperatura.style.color = "black"
+                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
                         }else if(novoRegistro[0].temperatura >= 16 || novoRegistro[0].temperatura <= 21){
-                            div_mensagem.style.backgroundColor = "green"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                            div_Temperatura.style.backgroundColor = "green"
+                            div_Temperatura.style.color = "black"
+                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
                         }
 
                         //ALERTA UMIDADE
                         if(novoRegistro[0].umidade <= 60 || novoRegistro[0].umidade >= 70){
-                            div_mensagem.style.backgroundColor = "red"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                            div_Umidade.style.backgroundColor = "red"
+                            div_Umidade.style.color = "black"
+                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
                         }else if(novoRegistro[0].umidade >= 61 || novoRegistro[0].umidade <= 64 || novoRegistro[0].umidade >= 67 || novoRegistro[0].umidade <= 69){
-                            div_mensagem.style.backgroundColor = "yellow"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                            div_Umidade.style.backgroundColor = "yellow"
+                            div_Umidade.style.color = "black"
+                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
                         }else if(novoRegistro[0].umidade >= 65 || novoRegistro[0].umidade <= 66){
-                            div_mensagem.style.backgroundColor = "green"
-                            div_mensagem.style.color = "black"
-                            div_mensagem.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                            div_Umidade.style.backgroundColor = "green"
+                            div_Umidade.style.color = "black"
+                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
                         }
                     }
 
