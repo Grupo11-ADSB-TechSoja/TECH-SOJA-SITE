@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
                 <div class="im"><a href=""><img style="width: 130px; height: 110px;"
                             src="./assets/img/logo.png"></a></div>
                 <div class="navbar">
-                    <div class="text"><a class="link" href="https://techsoja-help.freshdesk.com/support/home">Suporte</a></div>
+                    <div class="text"><a class="link" href="https://techsoja-atendimento.freshdesk.com/support/home">Suporte</a></div>
                     <div class="text"><a class="link" href="perfil.html">Perfil</a></div>
                     <div class="text"><a class="link" href="./index.html">Sair</a></div>
                 </div>
@@ -43,10 +43,13 @@
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card" style="height: 350%;">
                     <div class="card-content">
                         <div class="card-name">Temperatura Ideal</div>
                         <img src="./assets/img/Screenshot_1.png" alt="">
+                        <label for=""></label>
+                        <div class="card-name">Umidade Ideal</div>
+                        <img src="./assets/img/Screenshot_2.png" alt="">
                     </div>
                     <div class="icon-box">
                         <i class=""></i>
@@ -59,8 +62,9 @@
                 <h2>Grafico</h2>
                 <canvas id="myChartCanvas1"></canvas>
             </div>
-            <div class="alerts_pop_up">
-                
+            <div id="pop_alerta" class="alerts_pop_up">
+                <h2 id="alerta1" class="alerta1"></h2>
+                <h2 id="alerta2" class="alerta2"></h2>
             </div>
             <div class="silos">
                 <div class="Silo1">
@@ -177,126 +181,7 @@
         let labels = [];
 
         // Criando estrutura para plotar gráfico - dados
-        const graficos = [
-        {
-            id: "grafico1",
-            tipo: "line",
-            dados: {
-                labels: [],
-                datasets: [
-                    {
-                        label: "Temperatura (°C)",
-                        data: [],
-                        backgroundColor: "#3e95cd",
-                        backgroundColor: '#008000',
-                        borderColor: '#008000',
-                        borderwidth: 2
 
-                    },
-                    {
-                        label: 'Umidade (%)',
-                        data: [],
-                        backgroundColor: '#36A2EB',
-                        borderColor: '#36A2EB',
-                        borderwidth: 2
-                    },
-                ],
-            },
-        },
-        {
-            id: "grafico2",
-            tipo: "line",
-            dados: {
-                labels: [],
-                datasets: [
-                    {
-                        label: 'Temperatura (°C)',
-                        data: [],
-                        backgroundColor: '#008000',
-                        borderColor: '#008000',
-                        borderwidth: 2,
-                        fill: false,
-                    },
-                    {
-                        label: 'Umidade (%)',
-                        data: [],
-                        backgroundColrds : '#36A2EB',
-                        borderColor: '#36A2EB',
-                        borderwidth: 2,
-                        fill: false,
-                    },
-                ],
-            },
-        },
-        {
-            id: "grafico3",
-            tipo: "line",
-            dados: {
-                labels: [],
-                datasets: [
-                    {
-                        label: "Temperatura (°C)",
-                        data: [],
-                        backgroundColor: "#3e95cd",
-                        backgroundColor: '#008000',
-                        borderColor: '#008000',
-                        borderwidth: 2
-
-                    },
-                    {
-                        label: 'Umidade (%)',
-                        data: [],
-                        backgroundColor: '#36A2EB',
-                        borderColor: '#36A2EB',
-                        borderwidth: 2
-                    },
-                ],
-            },
-        },
-        {
-            id: "grafico4",
-            tipo: "line",
-            dados: {
-                labels: [],
-                datasets: [
-                    {
-                        label: 'Temperatura (°C)',
-                        data: [],
-                        backgroundColor: '#008000',
-                        borderColor: 'red',
-                        borderwidth: 2,
-                        fill: false,
-                    },
-                    {
-                        label: 'Umidade (%)',
-                        data: [],
-                        backgroundColor: '#36A2EB',
-                        borderColor: 'red',
-                        borderwidth: 2,
-                        fill: false,
-                    },
-                ],
-            }
-            , options: {
-                animations: { 
-                    tension: {
-                        duration: 1000,
-                        easing: 'linear',
-                        from: 1,
-                        to: 0,
-                        loop: true
-                    }
-                },
-                scales: {
-                    y: {
-                        min: 0,
-                        max: 100,
-                        beginAtZero: true
-                    }
-                }
-            }
-        }
-    ];
 
         var dados = {
             labels: [],
@@ -307,7 +192,12 @@
                     backgroundColor: "#3e95cd",
                     backgroundColor: '#008000',
                     borderColor: '#008000',
-                    borderwidth: 2, 
+                    borderwidth: 2
+
+                },
+                {
+                    label: "Umidade(%)",
+                    data: [],
                     backgroundColor: "#3e95cd",
                     backgroundColor: '#36A2EB',
                         borderColor: '#36A2EB',
@@ -325,7 +215,7 @@
             dados.labels.push(registro.dtHora);
             dados.datasets[0].data.push(registro.temperatura);
             dados.datasets[1].data.push(registro.umidade);
-        }rds .card 
+        }
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
@@ -347,7 +237,7 @@
             config
         );
 
-        setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 10000);
+        setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 2000);
     }
 
 
@@ -395,40 +285,74 @@
                         if(novoRegistro[0].temperatura <= 10 || novoRegistro[0].temperatura >= 25){
                             div_Temperatura.style.backgroundColor = "red"
                             div_Temperatura.style.color = "black"
-                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
-                        }else if(novoRegistro[0].temperatura >= 11 || novoRegistro[0].temperatura <= 15 || novoRegistro[0].temperatura >= 22 || novoRegistro[0].temperatura <= 24){
+                            div_Temperatura.innerHTML = `<b>Atualmente a sua temperatura está em  ${novoRegistro[0].temperatura}°C às ${novoRegistro[0].dtHora} horas.<br></b>`;
+                            
+                            if(novoRegistro[0].temperatura <= 10)
+                            {
+                                pop_alerta.style.animation = "animatered 1.0s linear infinite"
+                                alerta1.innerHTML = `TEMPERATURA EM ESTADO CRÍTICO !!!`
+                            }
+
+                            else if(novoRegistro[0].temperatura >= 25)
+                            {
+                                pop_alerta.style.animation = "animatered 1.0s linear infinite"
+                                alerta1.innerHTML = `TEMPERATURA EM ESTADO CRÍTICO !!!`
+                            }
+                        }
+                        if(novoRegistro[0].temperatura >= 11 && novoRegistro[0].temperatura <= 15 || novoRegistro[0].temperatura >= 22 && novoRegistro[0].temperatura <= 24){
+                            pop_alerta.style.animation = "none"
                             div_Temperatura.style.backgroundColor = "yellow"
                             div_Temperatura.style.color = "black"
-                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
-                        }else if(novoRegistro[0].temperatura >= 16 || novoRegistro[0].temperatura <= 21){
+                            div_Temperatura.innerHTML = `<b><b>Atualmente a sua temperatura está em  ${novoRegistro[0].temperatura}°C às ${novoRegistro[0].dtHora} horas.<br></b>`;
+                        }
+                        if(novoRegistro[0].temperatura >= 16 && novoRegistro[0].temperatura <= 21){
+                            pop_alerta.style.animation = "none"
                             div_Temperatura.style.backgroundColor = "green"
                             div_Temperatura.style.color = "black"
-                            div_Temperatura.innerHTML = `A temperatura está em ${novoRegistro[0].temperatura} entre os horários ${novoRegistro[0].dtHora}!<br>`;
+                            div_Temperatura.innerHTML = `<b>Atualmente a temperatura está em  ${novoRegistro[0].temperatura}°C às ${novoRegistro[0].dtHora} horas.<br></b>`;
                         }
 
                         //ALERTA UMIDADE
-                        if(novoRegistro[0].umidade <= 60 || novoRegistro[0].umidade >= 70){
+                        if(novoRegistro[0].umidade <= 60 || novoRegistro[0].umidade >= 70){  
                             div_Umidade.style.backgroundColor = "red"
                             div_Umidade.style.color = "black"
-                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
-                        }else if(novoRegistro[0].umidade >= 61 || novoRegistro[0].umidade <= 64 || novoRegistro[0].umidade >= 67 || novoRegistro[0].umidade <= 69){
-                            div_Umidade.style.backgroundColor = "yellow"
+                            div_Umidade.innerHTML = `<b>Atualmente a umidade está em ${novoRegistro[0].umidade}°C às ${novoRegistro[0].dtHora}horas.<br></b>`;
+                            if(novoRegistro[0].umidade <= 60)
+                            {
+                                pop_alerta.style.animation = "animatered 1.0s linear infinite"
+                                alerta2.innerHTML = `UMIDADE EM ESTADO CRÍTICO  !!!`
+                            }
+                            
+                            if(novoRegistro[0].umidade >= 70)
+                            {
+                                pop_alerta.style.animation = "animatered 1.0s linear infinite"
+                                alerta2.innerHTML = `UMIDADE EM ESTADO CRÍTICO !!!`
+                            }
+                        }
+                        if(novoRegistro[0].umidade >= 61 && novoRegistro[0].umidade <= 64 || novoRegistro[0].umidade >= 67 && novoRegistro[0].umidade <= 69){
+
+                            alerta2.innerHTML =""
+                                div_Umidade.style.backgroundColor = "yellow"
                             div_Umidade.style.color = "black"
-                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
-                        }else if(novoRegistro[0].umidade >= 65 || novoRegistro[0].umidade <= 66){
+                            div_Umidade.innerHTML = `<b>Atualmente a umidade está em ${novoRegistro[0].umidade}°C às ${novoRegistro[0].dtHora}horas.<br></b>`;
+                            
+                            
+                        }
+                        if(novoRegistro[0].umidade >= 65 && novoRegistro[0].umidade <= 66){
+                            alerta2.innerHTML =
                             div_Umidade.style.backgroundColor = "green"
                             div_Umidade.style.color = "black"
-                            div_Umidade.innerHTML += `A umidade está em ${novoRegistro[0].umidade} entre os horários ${novoRegistro[0].dtHora}!`;
+                            div_Umidade.innerHTML = `<b>Atualmente a umidade está em ${novoRegistro[0].umidade}°C às ${novoRegistro[0].dtHora}horas.<br></b>`;
                         }
                     }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 10000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 5000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idSensor, dados, myChart), 2000);
             }
         })
             .catch(function (error) {

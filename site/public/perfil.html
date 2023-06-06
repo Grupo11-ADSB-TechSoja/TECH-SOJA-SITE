@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Golos+Text&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body  >
+   
 
     <h1 style="color: white;"> Meu Perfil</h1>
         
@@ -33,6 +34,11 @@
 </html>
 <script>
 
+    sessionStorage.setItem(NOME_USUARIO);
+    
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     b_usuario2.innerHTML = sessionStorage.EMAIL_USUARIO;
+
+   
+   
 </script>

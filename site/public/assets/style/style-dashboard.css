@@ -51,7 +51,55 @@ background-color: transparent;
 border-radius: 30px;
 
 }
+.alerts_pop_up{
+    background: white;
+    display: flex;
+    animation:animatered 1.0s linear infinite
+}
+.alerta1
+{
+    display: flex;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: black;
+    text-align: center;
+ 
+}
+.alerta2
+{
+    display: flex;
+    font-size: 2em;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: black;
+    text-align: center;
+}
 
+@keyframes animateamarelo
+{
+    0%{
+        color:red
+    }
+    50%{
+        color: white;
+    }
+    100%{
+        color: red;
+    }
+}
+
+@keyframes animatered
+{
+    0%{
+        background: rgb(255, 0, 0);
+        
+    }
+    50%{
+        background:white;
+    }
+    100%{
+        background: red;
+    }
+}
 
 .right-size {
 display: flex;
